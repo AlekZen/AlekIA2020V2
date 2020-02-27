@@ -8,7 +8,7 @@ const functions = require('firebase-functions');
  });
 
  exports.webhook = functions.https.onRequest((request, response) => {
-    
+
     console.log("request.body.result.parameters: ", request.body.result.parameters);
     // {
     //     name: "john",
@@ -20,6 +20,7 @@ const functions = require('firebase-functions');
     response.send({
         speech:
             `${params.nombre} your hotel booking request for ${params.apellido} room is forwarded for
-             ${params.telefono} persons, we will contact you on  soon`
+             ${params.telefono} persons, me pondré en contacto contigo pronto`
     });
+
 });
